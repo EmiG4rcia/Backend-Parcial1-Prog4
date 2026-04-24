@@ -33,6 +33,18 @@ class ProductoCategoriaRepository:
         """Retorna un vínculo específico por sus dos IDs."""
         return self.session.get(ProductoCategoria, (producto_id, categoria_id))
 
+    def get_principal_by_categoria(self, categoria_id: int) -> Optional[ProductoCategoria]:
+        """
+        Verifica si esta categoría es es_principal para algún producto.
+        Se usa antes de eliminar una categoría para bloquear
+        la eliminación si está siendo usada como principal.
+        """
+        statement = select(ProductoCategoria).where(
+            ProductoCategoria.categoria_id == categoria_id,
+            ProductoCategoria.es_principal == True
+        )
+        return self.session.exec(statement).first()
+
     def create(self, data: ProductoCategoriaCreate) -> ProductoCategoria:
         """Crea el vínculo entre producto y categoría."""
         vinculo = ProductoCategoria(

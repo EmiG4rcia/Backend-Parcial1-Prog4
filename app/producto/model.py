@@ -1,6 +1,4 @@
-# ============================================================
-# PRODUCTO MODEL
-# ============================================================
+
 # Define la tabla 'producto' en PostgreSQL.
 # Características clave:
 # - precio_base con CHECK >= 0
@@ -9,7 +7,7 @@
 # - imagenes_url: texto libre (se guarda como JSON string)
 # - Soft delete con deleted_at
 # - Relaciones N:N con Categoria e Ingrediente
-# ============================================================
+
 
 from typing import Optional, List, TYPE_CHECKING
 from datetime import datetime
@@ -21,7 +19,7 @@ if TYPE_CHECKING:
     from app.producto_ingrediente.model import ProductoIngrediente
 
 
-class Producto(SQLModel, table=True):
+class Producto(SQLModel, table=True):  
     __tablename__ = "producto"
 
     # Clave primaria autoincremental
