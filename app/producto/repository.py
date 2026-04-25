@@ -1,12 +1,10 @@
-# ============================================================
-# PRODUCTO REPOSITORY
-# ============================================================
+
 # Responsable únicamente de las operaciones de DB
 # para el módulo Producto.
 # imagenes_url se serializa/deserializa como JSON string
 # ya que PostgreSQL TEXT no soporta arrays nativamente
 # sin extensiones adicionales.
-# ============================================================
+
 
 from sqlmodel import Session, select
 from typing import List, Optional
