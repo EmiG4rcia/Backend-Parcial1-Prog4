@@ -40,8 +40,7 @@ app.add_middleware(
 @app.on_event("startup")
 def on_startup():
     """
-    Se ejecuta automáticamente al iniciar el servidor.
-    Crea todas las tablas en PostgreSQL si no existen.
+    es ejecutado automáticamente al iniciar el servidor y se crean todas lss tablas en PostgreSQL si no existen
     """
     create_db_and_tables()
 

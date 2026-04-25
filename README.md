@@ -1,3 +1,9 @@
+## Video de presentación
+
+https://youtu.be/ZdeUw92ZCuE
+
+
+
 # Parcial 1 — Backend (FastAPI + SQLModel)
 
 Backend REST API desarrollado con FastAPI, SQLModel y PostgreSQL para el sistema de catálogo de productos.
@@ -35,5 +41,3 @@ Una vez corriendo, acceder a:
 - Swagger UI: http://127.0.0.1:8000/docs
 - ReDoc: http://127.0.0.1:8000/redoc
 
-## Video de presentación
-[Link al video — pendiente de grabación]
